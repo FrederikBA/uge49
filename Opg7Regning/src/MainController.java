@@ -1,7 +1,7 @@
 public class MainController {
+    Regning regning = new Regning();
 
     public void runProgram() {
-        Regning regning = new Regning();
         try {
             regning.calc(25, 10);
         } catch (InvalidNumberException e) {
