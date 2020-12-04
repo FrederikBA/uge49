@@ -7,6 +7,7 @@ public class Bibleotek {
     public Bibleotek() {
         books = new ArrayList<>();
     }
+
     public void addBook(Bog bog) {
         books.add(bog);
     }
@@ -16,24 +17,12 @@ public class Bibleotek {
     }
 
     public boolean containsBook(Bog bog) {
-        boolean retVal = false;
         for (Bog b : books) {
-            if (bog.equals(b.getISBNnr())) {
-                retVal = true;
-            } else {
-                retVal = false;
+            if (bog.equals(b)) {
+                return true;
             }
         }
-        System.out.println(books.size());
-        return retVal;
+        return false;
     }
 
 }
-
-/*
-        if (bog.getISBNnr() == 123) {
-            retVal = true;
-        } else {
-            retVal = false;
-        }
- */
